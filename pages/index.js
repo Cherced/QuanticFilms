@@ -2,7 +2,7 @@ import React from 'react'
 import { ButtonColors } from '../components/atoms/ButtonColors'
 import { IntroAnimationStart } from '../components/molecules/IntroAnimationStart.jsx'
 
-const Index = () => {
+const Start = () => {
     const [isVisible, setIsVisible] = React.useState(false)
     React.useEffect(() => {
         setTimeout(() => {
@@ -32,4 +32,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Start;
