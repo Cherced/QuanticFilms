@@ -2,7 +2,7 @@ import React from 'react'
 
 export const WelcomeAnimation = () => {
   return (
-    <div classname="animationIn">
+    <div className="animationIn">
     <section id="solar-system">
     <div id="sun" />
     <article id="mercury-trajectory">

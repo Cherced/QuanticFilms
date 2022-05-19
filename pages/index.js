@@ -2,7 +2,7 @@ import React from 'react'
 import { ButtonColors } from '../components/atoms/ButtonColors'
 import { IntroAnimationStart } from '../components/molecules/IntroAnimationStart.jsx'
 
-const index = () => {
+const Index = () => {
     const [isVisible, setIsVisible] = React.useState(false)
     React.useEffect(() => {
         setTimeout(() => {
