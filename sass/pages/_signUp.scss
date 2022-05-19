@@ -1,9 +1,9 @@
-.loginContainer {
+.signUpContainer{
     width: 100%;
     height: 100vh;
     background-color: black;
     color: white;
-
+    
     .parragaphAccount {
         color: #9C9C9C;
         font-style: normal;
@@ -19,7 +19,7 @@
     .principalButtonLogin {
         display: flex;
         justify-content: center;
-        margin-top: 200px;
+        margin-top: 110px;
         flex-direction: column;
         align-items: center;
         @include ButtonColors;
@@ -37,5 +37,4 @@
             }
         }
     }
-
 }

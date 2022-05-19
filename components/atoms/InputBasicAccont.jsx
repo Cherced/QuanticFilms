@@ -14,7 +14,7 @@ export const InputBasicAccont = (props) => {
         </div>
         ) :
         (
-        <input value={props.placeholder} />
+        <input value={props.placeholder}  />
         ) 
         }       
     </div>

@@ -25,4 +25,31 @@
         color: #FFFFFF;
 
     }
+
+    .BrandIcon {
+        position: absolute;
+        top: 10px;
+        left: 250px;
+        z-index: 1;
+    }
+}
+
+.headerJustBack {
+    display: flex;
+    align-items: center;
+    height: 95px;
+    padding: 40px 0 0 0;
+
+    .headerNavText {
+        margin: 0 20px;
+
+        button {
+            background-color: transparent;
+            border-radius: 50px;
+        }
+    }
+
+    .BrandIcon {
+        display: none;
+    }
 }

@@ -11,6 +11,9 @@ export const HeaderFloat = (props) => {
             </button>
         </nav>
         <h1>{props.titleHeader}</h1>
+        <div className="BrandIcon">
+        <img src="/images/brandLogoHeader.png" alt="BrandLogo"/>
+        </div>
     </header>
   )
 }
