@@ -1,6 +1,6 @@
 import React from 'react'
 import { HeaderFloat } from '../components/atoms/HeaderFloat'
-import { FilterSearch } from '../components/atoms/filterSearch'
+import { FilterSearch } from '../components/atoms/FilterSearch'
 import { AutorShower } from '../components/atoms/AutorShower'
 import { ButtonAddCategorie } from '../components/atoms/ButtonAddCategorie'
 

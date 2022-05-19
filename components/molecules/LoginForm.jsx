@@ -1,5 +1,5 @@
 import React from 'react'
-import { InputBasicAccont } from '../atoms/inputBasicAccont'
+import { InputBasicAccont } from '../atoms/InputBasicAccont'
 
 export const LoginForm = () => {
   return (
