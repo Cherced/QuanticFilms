@@ -6,7 +6,7 @@ import {ButtonsAccesBySM} from '../components/molecules/ButtonsAccesBySM'
 import { SignUpForm } from '../components/molecules/SignUpForm'
 
 
-const signUp = () => {
+const SignUp = () => {
   const router = useRouter()
   return (
     <div className="signUpContainer">
@@ -22,4 +22,4 @@ const signUp = () => {
   )
 }
 
-export default signUp
+export default SignUp

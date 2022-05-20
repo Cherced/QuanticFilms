@@ -6,7 +6,7 @@ import { LoginForm } from '../components/molecules/LoginForm'
 import  { useRouter } from 'next/router'
 
 
-const login = () => {
+const Login = () => {
   const router = useRouter()
   return (
     <div className="loginContainer">
@@ -22,4 +22,4 @@ const login = () => {
   )
 }
 
-export default login
+export default Login

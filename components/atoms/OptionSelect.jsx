@@ -87,7 +87,7 @@ console.log(parameter)
         {
             parameter.map((option) => {
                 return (
-                    <option value={option.value}>{option.value}</option>
+                    <option key={option.value} value={option.value}>{option.value}</option>
                 )
             })  
         }

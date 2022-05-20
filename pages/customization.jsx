@@ -5,10 +5,11 @@ import { FilterSearch } from '../components/atoms/FilterSearch'
 import { AutorShower } from '../components/atoms/AutorShower'
 import { ButtonAddCategorie } from '../components/atoms/ButtonAddCategorie'
 
-const customization = () => {
+const Customization = () => {
   const router = useRouter();
+
   return (
-    <>
+    <React.Fragment>
     <HeaderFloat path={""} HeaderClass="headerJustBack" HeaderNavClass="headerNavText" titleHeader="" />
     <div className="customizationContainer">
     <div className="textIntroContainer">
@@ -36,10 +37,10 @@ const customization = () => {
     <button onClick={() => router.push("/home")} className="nextButton">
     </button>
 </div>
-</>
+</React.Fragment>
 )
 
 
 }
 
-export default customization
+export default Customization
