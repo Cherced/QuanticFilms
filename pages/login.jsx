@@ -3,10 +3,11 @@ import { ButtonColors } from '../components/atoms/ButtonColors'
 import { HeaderFloat } from '../components/atoms/HeaderFloat'
 import {ButtonsAccesBySM} from '../components/molecules/ButtonsAccesBySM'
 import { LoginForm } from '../components/molecules/LoginForm'
-
+import  { useRouter } from 'next/router'
 
 
 const login = () => {
+  const router = useRouter()
   return (
     <div className="loginContainer">
         <HeaderFloat path={""} HeaderClass="headerText" HeaderNavClass="headerNavText" titleHeader="Login"/>
@@ -14,8 +15,8 @@ const login = () => {
         <ButtonsAccesBySM path={""} img1={"/images/mac.png"} img2={"/images/google.png"} alt="mediaLink" />
         <LoginForm />
         <div className="principalButtonLogin"> 
-        <ButtonColors path={""} title="Log In" />
-        <p className="parragaphAccountLogin">Don’t have an account? <a>Sign up</a></p>
+        <ButtonColors path={"customization"} title="Log In" />
+        <p className="parragaphAccountLogin">Don’t have an account? <a onClick={() => router.push("signUp")}>Sign up</a></p>
         </div>
     </div>
   )

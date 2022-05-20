@@ -1,11 +1,11 @@
 import React from 'react'
 
-export const FilterSearch = () => {
+export const FilterSearch = (props) => {
   return (
     <div className="FilterSearch">
-    <input type="text" value="Search" />
-    <button>
-    <img src="/images/searchICon.png" alt="SearchICon" />
+    <input type="text" value={props.value} />
+    <button onClick={props.onClick}>
+    <img src={props.src} alt="SearchICon" />
     </button>   
     </div>
   )

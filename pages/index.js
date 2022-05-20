@@ -15,7 +15,7 @@ const Start = () => {
     {
        !isVisible ? (<IntroAnimationStart />) : 
        (    
-         <div className="homeContainer">
+         <div className="startContainer">
        <div className="brandContainer">
          <img src="/images/brandLogo.png" alt="BrandLogo"/>
          <div className="brandTextContainer">
