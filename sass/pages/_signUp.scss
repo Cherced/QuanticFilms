@@ -1,9 +1,9 @@
-.signUpContainer{
+.signUpContainer {
     width: 100%;
     height: 100vh;
     background-color: black;
     color: white;
-    
+
     .parragaphAccount {
         color: #9C9C9C;
         font-style: normal;
@@ -32,9 +32,44 @@
             line-height: 21px;
             color: #9C9C9C;
             margin-top: 60px;
-            a{
+
+            a {
                 color: white;
             }
         }
     }
+}
+
+@media screen and (min-width: 375px) and (max-width: 724px) {
+    .signUpContainer {
+        .buttonsAccesBySM{
+            margin-top: 20px;
+        }
+        .formContainer{
+            margin-top: 15px;
+        }
+        .principalButtonLogin {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            flex-direction: column;
+            align-items: center;
+            @include ButtonColors;
+
+            p {
+                font-family: 'Ubuntu', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                color: #9C9C9C;
+                margin-top: 40px;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+
 }

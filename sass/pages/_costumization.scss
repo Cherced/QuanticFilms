@@ -106,3 +106,19 @@
     }
 
 }
+
+@media screen and (min-width: 375px) and (max-width: 724px) {
+    .customizationContainer {
+        .PopularCategoriesContainer {
+            .ButtonAddCategorie{
+                margin: 5px 0;
+            }
+        }
+        .titleSelects{
+            margin: 20px 0 0 0;
+        }
+    }
+    .customizationContainer .nextButton{
+        margin-top: 15px;
+    }
+}

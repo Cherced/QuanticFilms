@@ -86,3 +86,11 @@
     }
 
 }
+
+@media screen and (min-width: 375px) {
+    .startContainer {
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+}
+    

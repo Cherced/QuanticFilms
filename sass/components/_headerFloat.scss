@@ -53,3 +53,11 @@
         display: none;
     }
 }
+
+@media screen and (min-width: 375px) {
+    .headerText {
+        .BrandIcon {
+            left: 210px;
+        }
+    }
+}
