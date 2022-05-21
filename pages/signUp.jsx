@@ -10,7 +10,7 @@ const SignUp = () => {
   const router = useRouter()
   return (
     <div className="signUpContainer">
-        <HeaderFloat path={""} HeaderClass="headerText" HeaderNavClass="headerNavText" titleHeader="Sign Up"/>
+        <HeaderFloat src={"/images/arrow-left.png"} path={"login"} HeaderClass="headerText" HeaderNavClass="headerNavText" titleHeader="Sign Up"/>
         <p className="parragaphAccount">Sign up with one of following options</p>
         <ButtonsAccesBySM path={""} img1={"/images/mac.png"} img2={"/images/google.png"} alt="mediaLink" />
         <SignUpForm />

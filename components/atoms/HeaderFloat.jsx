@@ -7,7 +7,7 @@ export const HeaderFloat = (props) => {
     <header className={props.HeaderClass}>
         <nav  className={props.HeaderNavClass}>
             <button onClick={() => router.push(`/${props.path}`)}>
-                <img src="/images/arrow-left.png" alt="BrandLogo"/>
+                <img src={props.src} alt="BrandLogo"/>
             </button>
         </nav>
         <h1>{props.titleHeader}</h1>

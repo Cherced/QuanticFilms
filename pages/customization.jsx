@@ -10,7 +10,7 @@ const Customization = () => {
 
   return (
     <React.Fragment>
-    <HeaderFloat path={""} HeaderClass="headerJustBack" HeaderNavClass="headerNavText" titleHeader="" />
+    <HeaderFloat src={"/images/profile.png"} path={"/account"} HeaderClass="headerJustBack" HeaderNavClass="headerNavText" titleHeader="" />
     <div className="customizationContainer">
     <div className="textIntroContainer">
         <h1>what are you interested in ?</h1>

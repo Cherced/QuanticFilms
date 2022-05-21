@@ -17,13 +17,13 @@
 
     margin: 0;
 }
-body
+.animationIn
 {
-    overflow: hidden;
-
+    overflow: hidden; 
+    
     background-color: var(--dark-color);
 }
-body #solar-system
+.animationIn #solar-system
 {
     display: flex;
 
@@ -498,7 +498,7 @@ smartphone*/
   padding: 0;
 }
 
-body, html {
+.INTROOO {
    overflow: hidden;
 }
 

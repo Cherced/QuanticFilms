@@ -1,10 +1,36 @@
 .signUpContainer {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: black;
     color: white;
 
+    .headerSignUp {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 120px;
+
+        h1 {
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: #FFFFFF;
+        }
+
+        img {
+            position: relative;
+            left: 60px;
+        }
+    }
+
+
     .parragaphAccount {
+        display: flex;
+        justify-content: center;
+        align-content: space-between;
+        align-items: center;
         color: #9C9C9C;
         font-style: normal;
         font-weight: 400;
@@ -12,14 +38,13 @@
         line-height: 15px;
         font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
-        margin-top: 50px;
-        margin-left: 20px;
+        margin-top: 60px;
     }
 
     .principalButtonLogin {
         display: flex;
         justify-content: center;
-        margin-top: 110px;
+        margin-top: 80px;
         flex-direction: column;
         align-items: center;
         @include ButtonColors;
@@ -31,7 +56,7 @@
             font-size: 18px;
             line-height: 21px;
             color: #9C9C9C;
-            margin-top: 60px;
+            margin: 50px 0;
 
             a {
                 color: white;
@@ -40,19 +65,20 @@
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 724px) {
+@media screen and (max-width: 375px) and (max-height: 724px) {
     .signUpContainer {
-        scroll-behavior: smooth;
-        padding: 10px;
         .parragaphAccount {
             margin-top: 30px;
         }
-        .buttonsAccesBySM{
+
+        .buttonsAccesBySM {
             margin-top: 20px;
         }
-        .formContainer{
+
+        .formContainer {
             margin-top: 15px;
         }
+
         .principalButtonLogin {
             display: flex;
             justify-content: center;
@@ -68,7 +94,7 @@
                 font-size: 18px;
                 line-height: 21px;
                 color: #9C9C9C;
-                margin-top: 40px;
+                margin: 50px;
 
                 a {
                     color: white;
