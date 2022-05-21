@@ -10,7 +10,10 @@ const Login = () => {
   const router = useRouter()
   return (
     <div className="loginContainer">
-        <HeaderFloat path={""} HeaderClass="headerText" HeaderNavClass="headerNavText" titleHeader="Login"/>
+         <div className="headerLogin">
+           <h1>Login</h1>
+        <img src="/images/brandLogoHeader.png" alt="BrandLogo"/>
+        </div>
         <p className="parragaphAccount">Log in with one of following options</p>
         <ButtonsAccesBySM path={""} img1={"/images/mac.png"} img2={"/images/google.png"} alt="mediaLink" />
         <LoginForm />

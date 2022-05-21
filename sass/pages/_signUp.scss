@@ -42,6 +42,11 @@
 
 @media screen and (min-width: 375px) and (max-width: 724px) {
     .signUpContainer {
+        scroll-behavior: smooth;
+        padding: 10px;
+        .parragaphAccount {
+            margin-top: 30px;
+        }
         .buttonsAccesBySM{
             margin-top: 20px;
         }
