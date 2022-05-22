@@ -11,8 +11,8 @@ const home = () => {
       <FilterSearch src={"/images/menu.png"} value={"Search in the app"}/>
       <FilterByOptions Genre={"Genre"} Movies={"Movies"} Year={"Year"}/>
       <SliderInfiniteMovies />
-      <SliderSmallCase title="Your favourite" />
-      
+      <SliderSmallCase title="Your Favourite" />
+      <SliderSmallCase title="Discover More" />
     </div>
   )
 }

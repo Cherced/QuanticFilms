@@ -1,0 +1,25 @@
+
+.container-bar {
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.progress {
+	background-color: rgba(37, 40, 54, 0.8);
+	border-radius: 20px;
+	position: relative;	
+	height: 43px;
+	width: 308px;
+    padding: 6px 8px 0 8px;
+}
+
+.progress-bar {
+	background:#E7E1E1;    
+	border-radius: 20px;
+	height: 30px;
+	width: 0;
+	transition: 1s ease 0.3s;    
+}

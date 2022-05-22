@@ -1,6 +1,6 @@
 import React, { useState }  from "react";
 
-const ProgressBar = ( { bar }) =>{
+export const ProgressBar = ({ bar }) =>{
     const [style, setStyle] = useState({});
 
     setTimeout(() =>{
@@ -13,16 +13,14 @@ const ProgressBar = ( { bar }) =>{
 
     return(
         <div className="container-bar">
-            <p className="title">Ghibli movies watched</p>
+            <p className="title">Rank Movies Watched</p>
             <div className="progress">
                 <div className="progress-bar" style={style}>           
                 </div>      
             </div>
-            <div>{ bar } / 24 </div>
+            <div>{ bar } / 100 </div>
             
         </div>
         
     )
 }
-
-export default ProgressBar;
