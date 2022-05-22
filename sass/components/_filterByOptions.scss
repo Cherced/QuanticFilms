@@ -1,28 +1,45 @@
 .filterByOptionsContainer {
+    width: 90%;
     display: flex;
     margin: 30px 0;
+   
+
     .switchByOptions {
         background: transparent;
         border-radius: 50px;
         width: 32px;
         height: 32px;
+        margin-left: 47%;
+        transition: all 1.3s ease;
     }
-    .optionFilter {
-        width: auto;
-        height: 30px;
-        padding: 0 8px;
-        select {
-            padding: 5px;
-            border-radius: 30px;
-            border: 1px solid transparent;
-            width: 100%;
-            height: 100%;
-            color: #FFFFFF;
-            background: #1A1A1A;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            animation: shadownText 5s ease-in-out infinite;
-            background: #1A1A1A;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    .filterSelectsThree {
+        width: 0;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        justify-content: space-between;
+        transition: 1s ease;
+        .optionFilter {
+            width: auto;
+            height: 30px;
+            padding: 0 8px;
+
+            select {
+                padding: 5px;
+                border-radius: 30px;
+                border: 1px solid transparent;
+                width: 100%;
+                height: 100%;
+                color: #FFFFFF;
+                background: #1A1A1A;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                animation: shadownText 5s ease-in-out infinite;
+                background: #1A1A1A;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
         }
+
     }
+
 }

@@ -8,7 +8,7 @@ import {LogOut} from '../components/atoms/LogOut';
 const Account = () => {
   return (
     <>
-    <HeaderFloat src={"/images/arrow-left.png"} path={"customization"} HeaderClass="headerText" HeaderNavClass="headerNavText" titleHeader="Account"/>     
+    <HeaderFloat src={"/images/arrow-left.png"} path={"home"} HeaderClass="headerText" HeaderNavClass="headerNavText" titleHeader="Account"/>     
     <div className="accountContainer">
         <UserInfo userImage={"/images/khabib/3.jpg"}  UserName="khabib Nurmagomedov"  />
         <div className="userOptions">

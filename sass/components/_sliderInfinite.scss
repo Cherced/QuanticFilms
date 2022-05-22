@@ -23,11 +23,11 @@
     }
 
     .slider--BTN {
-        position: absolute;
+        position: relative;
         width: 40px;
         height: 40px;
         background: rgba(255, 255, 255, 0.7);
-        top: 64%;
+        top: 20px;
         transform: translateY(-50%);
         border-radius: 50%;
         cursor: pointer;
@@ -46,6 +46,6 @@
     }
 
     .btn--rg {
-        right: 50px;
+        left: 250px;
     }
 }
