@@ -7,7 +7,7 @@ import { Footer } from '../components/molecules/Footer';
 import {getTrendingMoviesPreview} from '../DataBase/dataBase.cherced';
 
 
-const home = () => {
+const Home = () => {
   const [trending , setTrending] = useState([]);
   useEffect(() => {
     let mounted = true;
@@ -40,4 +40,4 @@ const home = () => {
   )
 }
 
-export default home;
+export default Home;
