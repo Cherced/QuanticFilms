@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "a tracker designed and coded full of me, maded on react = js, sass, HTML deployed on vercel, and using a TMDAPI, ",
   "main": "index.js",
+  "proxy": "https://jsonplaceholder.typicode.com",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -29,7 +30,9 @@
   },
   "homepage": "https://github.com/Cherced/QuanticFilms#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "next": "^12.1.6",
+    "nextjs-cors": "^2.1.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "sass": "^1.51.0"

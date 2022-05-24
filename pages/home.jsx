@@ -1,12 +1,30 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { FilterSearch } from '../components/atoms/FilterSearch';
 import {FilterByOptions} from '../components/molecules/FilterByOptions';
 import { SliderInfiniteMovies } from '../components/molecules/SliderInfiniteMovies';
 import { SliderSmallCase } from '../components/molecules/SliderSmallCase';
 import { Footer } from '../components/molecules/Footer';
+import {getTrendingMoviesPreview} from '../DataBase/dataBase.cherced';
 
 
 const home = () => {
+  const [trending , setTrending] = useState([]);
+  useEffect(() => {
+    let mounted = true;
+    getTrendingMoviesPreview().then((data) => {
+      if (mounted) {
+        console.log(data);
+        const res = data; 
+        setTrending(res);
+      }
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+ console.log("trending movies " + trending );
+
   return (
     <div className="homeContainer" id="home">
       <div className="headerHome">

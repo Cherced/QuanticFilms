@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react'
 
 export const OptionSelect = (props) => {
-    const [parameter, setParameter] = useState([])
-        console.log(props.defaultParameter)        
+    const [parameter, setParameter] = useState([])      
         const options = ()=>{
             if (props.defaultParameter === "Genre") {
                 const options = [
@@ -79,7 +78,6 @@ export const OptionSelect = (props) => {
     useEffect(() => {
     setParameter(options())
     }, []) 
-console.log(parameter)
   return (
     <div className="optionFilter">
         <select id={props.id} onChange={props.onChange}>
