@@ -33,5 +33,15 @@
         }
 
     }
+}
+@media screen and (min-width: 375px){
+    .PopularCategoriesContainer{
+        margin-top: 30px;
+    }
+}
 
+@media screen and (min-width: 414px){
+    .PopularCategoriesContainer{
+        margin-top: 50px;
+    }
 }

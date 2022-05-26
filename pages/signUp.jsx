@@ -14,9 +14,9 @@ const SignUp = () => {
         <p className="parragaphAccount">Sign up with one of following options</p>
         <ButtonsAccesBySM path={""} img1={"/images/mac.png"} img2={"/images/google.png"} alt="mediaLink" />
         <SignUpForm />
-        <div className="principalButtonLogin"> 
+        <div className="principalButtonSignUp"> 
         <ButtonColors path={"/customization"} title="Create Account" />
-        <p className="parragaphAccountLogin">Already have an account? <a onClick={() => router.push("login")}>Login</a></p>
+        <p className="parragaphAccountSignUp">Already have an account? <a onClick={() => router.push("login")}>Login</a></p>
         </div> 
     </div>
   )

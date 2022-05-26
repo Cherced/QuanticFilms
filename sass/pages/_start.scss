@@ -27,6 +27,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+        margin-bottom: 90px;
 
         img {
             position: relative;
@@ -46,9 +47,11 @@
                 0% {
                     filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
                 }
+
                 50% {
                     filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.603));
                 }
+
                 100% {
                     filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
                 }
@@ -81,16 +84,115 @@
     }
 
     .principalButton {
-        margin-top: 200px;
+        margin-top: 100px;
         @include ButtonColors;
     }
 
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 320px) {
     .startContainer {
-        justify-content: flex-start;
-        margin-top: 20px;
+        .brandContainer {
+            margin-bottom: 30px;
+
+            .brandTextContainer {
+                :nth-child(1) {
+                    font-size: 30px;
+                    line-height: 36px;
+                }
+
+                :nth-child(2) {
+                    font-size: 30px;
+                    line-height: 36px;
+                }
+            }
+        }
+
+        .principalButton {
+            margin: 30px 0 90px;
+
+            button {
+                width: 280px;
+            }
+        }
     }
 }
-    
+
+
+@media screen and (max-height: 667px) and (max-width: 375px) {
+    .startContainer {
+        .brandContainer {
+            margin-bottom: 30px;
+
+            .brandTextContainer {
+                :nth-child(1) {
+                    font-size: 30px;
+                    line-height: 36px;
+                }
+
+                :nth-child(2) {
+                    font-size: 30px;
+                    line-height: 36px;
+                }
+            }
+        }
+
+        .principalButton {
+            margin: 30px 0 90px;
+
+            button {
+                width: 280px;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 763px) and (max-width: 414px) {
+    .startContainer {
+        .brandContainer {
+            margin-bottom: 20px;
+
+        }
+
+        .principalButton {
+            margin: 40px 0 100px;
+
+            button {
+                width: 280px;
+            }
+        }
+    }
+}
+
+@media screen and (min-height: 1024px) and (max-width: 768px) {
+    .startContainer {
+        .brandContainer {
+            margin-bottom: 20px;
+
+            .brandTextContainer {
+                :nth-child(1) {
+                    font-size: 50px;
+                    line-height: 36px;
+                }
+
+                :nth-child(2) {
+                    margin-top: 20px;
+                    font-size: 50px;
+                    line-height: 36px;
+                    margin-left: 60px;
+                }
+            }
+
+        }
+
+        .principalButton {
+            margin: 40px 0 100px;
+
+            button {
+                width: 330px;
+            }
+        }
+    }
+}
+ 
+

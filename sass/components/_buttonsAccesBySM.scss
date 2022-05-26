@@ -13,3 +13,62 @@
         border-radius: 11px;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .buttonsAccesBySM {
+        margin-top: 30px;
+        justify-content: space-evenly;
+        button {
+            width: 140px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 414px) {
+    .buttonsAccesBySM {
+        margin-top: 50px;
+        justify-content: space-evenly;
+        button {
+            width: 180px;
+            height: 70px;
+            img{
+                width: 30px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .buttonsAccesBySM {
+        margin-top: 80px;
+        justify-content: space-evenly;
+        button {
+            width: 340px;
+            height: 90px;
+            img{
+                width: 35px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .buttonsAccesBySM {
+        margin-top: 40px;
+        justify-content: space-evenly;
+        width: 600px;
+        button {
+            width: 250px;
+            height: 80px;
+            img{
+                width: 35px;
+            }
+        }
+    }
+}
+
+
+

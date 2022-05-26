@@ -1,9 +1,9 @@
 @mixin ButtonColors {
-    button{
+    button {
         width: 330px;
         height: 50px;
         background: linear-gradient(270deg, #000000, #15adff, #25ed9e, #313a35, #000000);
-        background-size: 1000% 1000%;    
+        background-size: 1000% 1000%;
         -webkit-animation: AnimationName 10s ease infinite;
         -moz-animation: AnimationName 10s ease infinite;
         animation: AnimationName 10s ease infinite;
@@ -19,19 +19,58 @@
         color: #FFFFFF;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+
+    @media screen and (max-width: 320px) {
+        button {
+            width: 280px;
+        }
+    }
+
+    @media screen and (max-width: 320px) and (max-height: 372px) {
+        button {
+            width: 280px;
+        }
+    }
+
     @-webkit-keyframes AnimationName {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
     }
+
     @-moz-keyframes AnimationName {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
     }
+
     @keyframes AnimationName {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
     }
 }

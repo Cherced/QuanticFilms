@@ -28,11 +28,13 @@
 
     .passwordInput {
         width: 330px;
+
         img {
             position: relative;
             right: -290px;
             top: -30px
         }
+
         input {
             width: 330px;
             height: 40px;
@@ -52,3 +54,81 @@
     }
 }
 
+@media screen and (max-width: 320px) {
+    .inputBasicAccont {
+        input {
+            width: 280px;
+        }
+
+        .passwordInput {
+            width: 280px;
+
+            img {
+                position: relative;
+                right: -245px;
+                top: -30px
+            }
+
+            input {
+                width: 280px;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 414px) {
+    .inputBasicAccont {
+        input {
+            width: 350px;
+        }
+
+        .passwordInput {
+            width: 350px;
+
+            img {
+                position: relative;
+                right: -310px;
+                top: -30px
+            }
+
+            input {
+                width: 350px;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 768px) {
+    .inputBasicAccont {
+        h1 {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        input {
+            width: 450px;
+            height: 50px;
+            font-size: 16px;
+        }
+
+        .passwordInput {
+            width: 450px;
+
+            img {
+                position: relative;
+                right: -400px;
+                top: -35px
+            }
+
+            input {
+                width: 450px;
+                height: 50px;
+                font-size: 16px;
+            }
+        }
+    }
+}
