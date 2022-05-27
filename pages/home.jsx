@@ -2,20 +2,33 @@ import React, {useEffect, useState} from 'react'
 import { FilterSearch } from '../components/atoms/FilterSearch';
 import {FilterByOptions} from '../components/molecules/FilterByOptions';
 import { SliderInfiniteMovies } from '../components/molecules/SliderInfiniteMovies';
-/* import { SliderSmallCase } from '../components/molecules/SliderSmallCase'; */
+import { SliderSmallCase } from '../components/molecules/SliderSmallCase';
 import { Footer } from '../components/molecules/Footer';
 import {getTrendingMoviesPreview} from '../DataBase/dataBase.cherced';
+import {getTopRated} from '../DataBase/dataBase.cherced';
+import {getNowPlaying} from '../DataBase/dataBase.cherced';
 
 
 const Home = () => { 
   const [trendingMoviesPreview, setTrendingMoviesPreview] = useState([]);
+  const [topRated, setTopRated] = useState([]);
+  const [playing, setPlaying] = useState([]);
 
   useEffect(() => {
     let mounted = true;
     getTrendingMoviesPreview().then((data) => {
       if (mounted) {
-        console.log(data);
         setTrendingMoviesPreview(data);
+      }
+    });
+    getTopRated().then((data) => {
+      if (mounted) {
+        setTopRated(data);
+      }
+    });
+    getNowPlaying().then((data) => {
+      if (mounted) {
+       setPlaying(data);
       }
     });
     return () => {
@@ -23,10 +36,49 @@ const Home = () => {
     };
   }, []);
 
-  console.log(trendingMoviesPreview);
+  console.log(playing);
 
-  const data = [...trendingMoviesPreview];
-  console.log(data);
+  function next(){
+    console.log('next')
+    const slider = document.querySelector('#slider');
+    let sliderSection = document.querySelectorAll('.sliderContentItem__image');
+    let sliderSectionFirst = sliderSection[0];
+    console.log(sliderSectionFirst);
+    slider.style.marginLeft = "-200%";
+    slider.style.transition = "all 0.5s";
+    setTimeout(function(){
+    slider.style.transition = "none"; 
+    slider.insertAdjacentElement('beforeend', sliderSectionFirst);
+    slider.style.marginLeft = "-100%";
+}
+,500);
+}
+function prev(){
+    console.log('prev')
+    const slider = document.querySelector('#slider');
+    let sliderSection = document.querySelectorAll('.sliderContentItem__image');
+    let sliderSectionLength = sliderSection.length;
+    let sliderSectionLast = sliderSection[sliderSectionLength - 1];
+    console.log(sliderSectionLast);
+    slider.style.marginLeft = "0";
+    slider.style.transition = "all 0.5s";
+    setTimeout(function(){
+    slider.style.transition = "none"; 
+    slider.insertAdjacentElement('afterbegin', sliderSectionLast);
+    slider.style.marginLeft = "-100%";
+}
+,500);
+}
+
+const handleClickRight = () => {
+    console.log("click");
+    next();
+}
+
+const handleClickLeft = () => {
+    console.log("click");
+    prev();
+} 
 
   return (
      <div className="homeContainer" id="home">
@@ -35,20 +87,45 @@ const Home = () => {
       </div>    
       <FilterSearch src={"/images/menu.png"} value={"Search in the app"}/>
       <FilterByOptions Genre={"Genre"} Movies={"Movies"} Year={"Year"}/>
-      <SliderInfiniteMovies />
+      <div className="sliderInfiniteMoviesContainer">
+        <div className="sliderContent" id="slider">
+          {
+            topRated.map((item, index) => {
+              return (
+                <SliderInfiniteMovies key={index} id={item.id} src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}/>
+              )
+            })
+          }
+      
+      </div>
+        <button onClick={handleClickRight} className="slider--BTN btn--rg" id="btn-rg">
+           &#62;
+        </button>
+        <button onClick={handleClickLeft} className="slider--BTN btn--lf" id="btn-lf">
+            &#60;
+        </button>
+    </div>
 
-      <h1 className="titleSelects">oeeee</h1>
+      <h1 className="titleSelects">Trending Movies:</h1>
     <div className="SliderSmallCaseContainer">
         <div className="SliderSmallCase" id="sliderS">
           {
-            data.map((data, index) => {
+            trendingMoviesPreview.map((data, index) => {
               return (
-               <button key={index} className="LinkTooContainer" >
-                <label>{data.original_title}</label>
-                <div className="SliderSmallCase__image">
-                <img className="SliderSmallCase__img" src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`} alt=""/>
-                </div>
-                </button>
+                <SliderSmallCase key={index} id={data.id} src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`} nameMovie={data.original_title.substring(0,15)}/>
+              )               
+              }
+            )
+          }
+          </div>     
+      </div>
+      <h1 className="titleSelects">Now Playing:</h1>
+    <div className="SliderSmallCaseContainer">
+        <div className="SliderSmallCase" id="sliderS">
+          {
+            playing.map((data, index) => {
+              return (
+                <SliderSmallCase key={index} id={data.id} src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`} nameMovie={data.original_title.substring(0,15)}/>
               )               
               }
             )

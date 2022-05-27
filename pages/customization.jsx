@@ -1,11 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {useRouter} from 'next/router' 
-import { HeaderFloat } from '../components/atoms/HeaderFloat'
 import { FilterSearch } from '../components/atoms/FilterSearch'
 import { AutorShower } from '../components/atoms/AutorShower'
 import { ButtonAddCategorie } from '../components/atoms/ButtonAddCategorie'
-
+import {getGenresPreview} from '../DataBase/dataBase.cherced';
+import { getActorsPreview } from '../DataBase/dataBase.cherced'
 const Customization = () => {
+  const [genresPreview, setGenresPreview] = useState([]);
+  const [actorsPreview, setActorsPreview] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+    getActorsPreview().then((actors) => {
+      if (mounted) {
+        console.log(actors);
+        setActorsPreview(actors);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    let mounted = true;
+    getGenresPreview().then((data) => {
+      if (mounted) {
+        console.log(data);
+        setGenresPreview(data);
+      }
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   const router = useRouter();
 
   return (
@@ -18,22 +44,23 @@ const Customization = () => {
     <FilterSearch src={"/images/searchICon.png"} value={"Search"}/>
     <h1 className="titleSelects" >Popular Categories</h1>
     <div className="PopularCategoriesContainer">
-    <ButtonAddCategorie text="Romance" />
-    <ButtonAddCategorie text="Fantasy" />
-    <ButtonAddCategorie text="Horror" />
-    <ButtonAddCategorie text="Thriller" />
-    <ButtonAddCategorie text="Mystery" />
-    <ButtonAddCategorie text="Sci-Fi" />   
-    <ButtonAddCategorie text="Action" />     
+      {
+        genresPreview.map((data) => {
+          return (
+            <ButtonAddCategorie key={data.id} text={data.name}/>
+          )
+        })
+      }
     </div>
     <h1 className="titleSelects" >Popular Actors</h1>
     <div className="PopularActorsContainer">
-    <AutorShower src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" actorName="Tom Cruise" />  
-    <AutorShower src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" actorName="Tom Cruise" />
-    <AutorShower src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" actorName="Tom Cruise" />
-    <AutorShower src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid" actorName="Tom Cruise" />        
-    <AutorShower src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" actorName="Tom Cruise" />  
-    <AutorShower src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" actorName="Tom Cruise" />  
+      {
+        actorsPreview.map((data) => {
+          return (
+            <AutorShower key={data.id} src={`https://image.tmdb.org/t/p/w500${data.profile_path}`} actorName={data.name}/>
+          )
+        })
+      }
     </div>
     <button onClick={() => router.push("/home")} className="nextButton">
     </button>

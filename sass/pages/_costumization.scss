@@ -69,18 +69,22 @@
         justify-content: flex-start;
 
         .AutorShowerCard {
-            margin: 0 10px;
+            height: 170px;
+            margin: 0 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-evenly;
 
             img {
+                object-fit: cover;
                 width: 79px;
                 height: 79px;
                 border-radius: 50%;
             }
 
             p {
+                height: 40px;
                 font-family: 'Ubuntu', sans-serif;
                 font-style: normal;
                 font-weight: 300;
