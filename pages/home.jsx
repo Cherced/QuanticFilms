@@ -4,9 +4,9 @@ import {FilterByOptions} from '../components/molecules/FilterByOptions';
 import { SliderInfiniteMovies } from '../components/molecules/SliderInfiniteMovies';
 import { SliderSmallCase } from '../components/molecules/SliderSmallCase';
 import { Footer } from '../components/molecules/Footer';
-import {getTrendingMoviesPreview} from '../DataBase/dataBase.cherced';
-import {getTopRated} from '../DataBase/dataBase.cherced';
-import {getNowPlaying} from '../DataBase/dataBase.cherced';
+import {getTrendingMoviesPreview} from './api/DataBase/dataBase.cherced';
+import {getTopRated} from './api/DataBase/dataBase.cherced';
+import {getNowPlaying} from './api/DataBase/dataBase.cherced';
 
 
 const Home = () => { 

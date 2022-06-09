@@ -3,8 +3,8 @@ import {useRouter} from 'next/router'
 import { FilterSearch } from '../components/atoms/FilterSearch'
 import { AutorShower } from '../components/atoms/AutorShower'
 import { ButtonAddCategorie } from '../components/atoms/ButtonAddCategorie'
-import {getGenresPreview} from '../DataBase/dataBase.cherced';
-import { getActorsPreview } from '../DataBase/dataBase.cherced'
+import {getGenresPreview} from './api/DataBase/dataBase.cherced'
+import { getActorsPreview } from './api/DataBase/dataBase.cherced'
 const Customization = () => {
   const [genresPreview, setGenresPreview] = useState([]);
   const [actorsPreview, setActorsPreview] = useState([]);
