@@ -7,12 +7,13 @@ import {LogOut} from '../components/atoms/LogOut';
 import {getSession} from 'next-auth/react'
 
 const Account = ({session}) => {
-
+  const {data, status} = useSession();
+  console.log(data, status)
   return (
     <>
     <HeaderFloat src={"/images/arrow-left.png"} path={"home"} HeaderClass="headerText" HeaderNavClass="headerNavText" titleHeader="Account"/>     
     <div className="accountContainer">
-        <UserInfo userImage={`${session.user.image}`}  UserName={`${session.user.name}`}  />
+        <UserInfo userImage={`${data.user.image}`}  UserName={`${data.user.name}`}  />
         <div className="userOptions">
         <ButtonColors path={"/customization"} title="Edit Profile" />
         <ButtonColors path={"/customization"} title="Change Password" />
@@ -28,13 +29,6 @@ const Account = ({session}) => {
 
 export const getServerSideProps = async ({req}) => {
   const session =  await getSession({req})
-
-  if(!session)return {
-    redirect: {
-      destination: '/login',
-      permanent: false
-    }
-  }
 
   return{
     props:{

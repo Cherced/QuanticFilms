@@ -8,14 +8,12 @@ import {useSession, signIn } from 'next-auth/react'
 
 
 const Login = () => {
-
   const { data: session, status } = useSession() 
   const router = useRouter();
 
   if(status !== 'loading' && status === 'authenticated'){
-      router.push('/home')
+      router.push('/')
   } 
-
   return (
     <div className="loginContainer">
          <div className="headerLogin">

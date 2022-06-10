@@ -4,17 +4,12 @@ import { HeaderFloat } from '../components/atoms/HeaderFloat'
 import {ButtonsAccesBySM} from '../components/molecules/ButtonsAccesBySM'
 import { LoginForm } from '../components/molecules/LoginForm'
 import  { useRouter } from 'next/router'
-import {useSession, signIn } from 'next-auth/react'
+import {getSession, signIn } from 'next-auth/react'
 
 
-const Login = () => {
-
-  const { data: session, status } = useSession() 
-  const router = useRouter();
-
-  if(status !== 'loading' && status === 'authenticated'){
-      router.push('/home')
-  } 
+const Login = ({ session }) => {
+  const router = useRouter()
+  console.log(session)
 
   return (
     <div className="loginContainer">
@@ -31,6 +26,28 @@ const Login = () => {
         </div>
     </div>
   )
+}
+
+export const getServerSideProps = async (context) => {
+  const session =  await getSession(context)
+  /* if(!session) {
+  return {
+      redirect: {
+      destination: '/login',
+      permanent: false
+    }
+  }    */
+  } else{
+    return{
+      redirect: {
+        destination: '/home'
+      },
+      props:{
+        session
+      }
+    }
+  }
+  
 }
 
 export default Login

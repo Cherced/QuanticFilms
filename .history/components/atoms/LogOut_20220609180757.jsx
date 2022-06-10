@@ -1,15 +1,13 @@
 import React from 'react'
-import {useRouter} from 'next/router'
 import { signOut, useSession} from "next-auth/react"
 
 export const LogOut = () => {
-  const {status} = useSession();
-  console.log(status)
-  const router = useRouter()
-/* 
- if (status == "unauthenticated"){
-    router.push("/")
-  }  */
+  const {data, status} = useSession();
+  console.log(data, status)
+
+ /*  if (status ==){
+
+  } */
 
   return (
     <button onClick={()=> signOut()} className="logOut">

@@ -6,10 +6,10 @@ export const LogOut = () => {
   const {status} = useSession();
   console.log(status)
   const router = useRouter()
-/* 
+
  if (status == "unauthenticated"){
     router.push("/")
-  }  */
+  } 
 
   return (
     <button onClick={()=> signOut()} className="logOut">
