@@ -11,6 +11,7 @@ export const InputBasicAccont = (props) => {
         (
         <div className="passwordInput"> 
         <input type={props.type} name={props.name} placeholder={props.placeholder} autoComplete={props.autoComplete} />
+        <img src="/images/checkedPassword.png" alt="icon-check"/> 
         </div>
         ) :
         (

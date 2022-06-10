@@ -3,18 +3,18 @@ import React from 'react'
 export const InputBasicAccont = (props) => {
   return (
     <div className="inputBasicAccont">
-        <label for={props.for}>{props.titleForm}</label>
+        <h1>{props.titleForm}</h1>
         {
         
         props.password ? 
-
         (
         <div className="passwordInput"> 
-        <input type={props.type} name={props.name} placeholder={props.placeholder} autoComplete={props.autoComplete} />
+        <input type='text' value={props.placeholder} />
+        <img src="/images/checkedPassword.png" alt="icon-check"/> 
         </div>
         ) :
         (
-        <input type={props.type} name={props.name} placeholder={props.placeholder} autoComplete={props.autoComplete}  />
+        <input value={props.placeholder}  />
         ) 
         }       
     </div>

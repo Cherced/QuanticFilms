@@ -1,14 +1,12 @@
 .inputBasicAccont {
-    display: flex;
-    flex-direction: column;
-    label {
+    h1 {
         font-family: 'Ubuntu';
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
         line-height: 21px;
         color: #FFFFFF;
-        margin: 10px;
+        margin-top: 10px;
     }
 
     input {
@@ -106,7 +104,7 @@
 
 @media screen and (min-width: 768px) {
     .inputBasicAccont {
-        label {
+        h1 {
             margin-top: 20px;
             font-size: 20px;
         }

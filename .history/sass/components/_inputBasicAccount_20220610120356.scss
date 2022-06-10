@@ -1,6 +1,4 @@
 .inputBasicAccont {
-    display: flex;
-    flex-direction: column;
     label {
         font-family: 'Ubuntu';
         font-style: normal;
@@ -8,7 +6,7 @@
         font-size: 18px;
         line-height: 21px;
         color: #FFFFFF;
-        margin: 10px;
+        margin-top: 10px;
     }
 
     input {

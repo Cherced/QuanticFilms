@@ -3,14 +3,14 @@ import React from 'react'
 export const InputBasicAccont = (props) => {
   return (
     <div className="inputBasicAccont">
-        <label for={props.for}>{props.titleForm}</label>
+        <label>{props.titleForm}</label>
         {
         
         props.password ? 
-
         (
         <div className="passwordInput"> 
         <input type={props.type} name={props.name} placeholder={props.placeholder} autoComplete={props.autoComplete} />
+        <img src="/images/checkedPassword.png" alt="icon-check"/> 
         </div>
         ) :
         (
