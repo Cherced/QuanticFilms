@@ -1,0 +1,21 @@
+.MovieContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+    .bannerMovie {
+        img{
+            width: 100%;
+        }
+    }
+    .InfoMovieContainer{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}

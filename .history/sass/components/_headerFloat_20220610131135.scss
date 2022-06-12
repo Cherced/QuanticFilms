@@ -1,0 +1,98 @@
+.headerText {
+    display: flex;
+    align-items: center;
+    height: 95px;
+    padding: 20px 0 0 0;
+
+    .headerNavText {
+        margin: 0 20px;
+
+        button {
+            background-color: transparent;
+            border-radius: 50px;
+        }
+    }
+
+    h1 {
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        /* identical to box height */
+
+
+        color: #FFFFFF;
+
+    }
+
+    .BrandIcon {
+        position: absolute;
+        top: 10px;
+        left: 226px;
+        z-index: 1;
+    }
+}
+
+.headerJustBack {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding: 20px 0 0 0;
+
+    .headerNavText {
+        margin: 0 20px;
+
+        button {
+            background-color: transparent;
+            border-radius: 50px;
+        }
+    }
+
+    .BrandIcon {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .headerText {
+        .BrandIcon {
+            top: -20px;
+            left: 156px;
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .headerText {
+        .BrandIcon {
+            left: 210px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 414px) {
+    .headerText {
+        .BrandIcon {
+            left: 245px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .headerText {
+        .BrandIcon {
+            left: 545px;
+        }
+    }
+}
+
+@media screen and (min-width: 124px) {
+    .headerText {
+        .BrandIcon {
+            left: 545px;
+        }
+    }
+}

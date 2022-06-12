@@ -1,0 +1,200 @@
+.MovieContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background: linear-gradient(237deg, #000000, #8c8c8c, #383838, #161616, #5d5d5d, #000000, #707070, #4b4b4b, #7a7a7a, #000000, #676767, #8c8c8c, #000000);
+    background-size: 2600% 2600%;
+
+    -webkit-animation: AnimationName 33s ease infinite;
+    -moz-animation: AnimationName 33s ease infinite;
+    animation: AnimationName 33s ease infinite;
+
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @keyframes AnimationName {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    .bannerMovie {
+        img {
+            width: 100%;
+        }
+    }
+
+    .InfoMovieContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            padding: 20px 10px;
+            font-family: $FontTitle;
+            font-size: 22px;
+            text-align: center;
+            animation: shadownText 3s ease-in-out infinite;
+        }
+
+        .infoMovieOptions {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .ranksInfoMovie {
+                display: flex;
+                align-items: baseline;
+
+                img {
+                    margin: 0 10px;
+                }
+
+                p {
+                    font-family: $FontTitle;
+                    filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+                }
+            }
+
+            .timeinfoMovie {
+                display: flex;
+                align-items: baseline;
+
+                img {
+                    margin: 0 10px;
+                }
+
+                p {
+                    font-family: $FontTitle;
+                }
+            }
+
+            .genderinfoMovie {
+                display: flex;
+                align-items: baseline;
+
+                img {
+                    margin: 0 10px;
+                }
+
+                p {
+                    font-family: $FontTitle;
+                }
+            }
+        }
+
+        .storyLineMovieContainer {
+            width: 90%;
+            text-align: justify;
+            font-family: $FontTitle;
+
+            h2 {
+                margin: 20px 0
+            }
+        }
+    }
+
+    .principalButtonLogin {
+
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+        flex-direction: column;
+        align-items: center;
+        @include ButtonColors;
+
+        p {
+            font-family: 'Ubuntu', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #9C9C9C;
+            margin-top: 60px;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    .PopularActorsContainer {
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        .AutorShowerCard {
+            height: 170px;
+            margin: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            img {
+                object-fit: cover;
+                width: 79px;
+                height: 79px;
+                border-radius: 50%;
+            }
+
+            p {
+                height: 40px;
+                font-family: 'Ubuntu', sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 18px;
+                text-align: center;
+                letter-spacing: -0.165px;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+}

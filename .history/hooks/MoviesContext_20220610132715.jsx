@@ -1,0 +1,52 @@
+import React from "react"
+import {getTrendingMoviesPreview} from './api/DataBase/dataBase.cherced';
+import {getTopRated} from './api/DataBase/dataBase.cherced';
+import {getNowPlaying} from './api/DataBase/dataBase.cherced';
+
+const MoviesContext = React.createContext({})
+
+export const MoviesContextProvider = () => {
+    
+React.useEffect(() => {
+    let mounted = true;
+    getTrendingMoviesPreview().then((data) => {
+      if (mounted) {
+        setTrendingMoviesPreview(data);
+      }
+    });
+    getTopRated().then((data) => {
+      if (mounted) {
+        setTopRated(data);
+      }
+    });
+    getNowPlaying().then((data) => {
+      if (mounted) {
+       setPlaying(data);
+      }
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+    const [trendingMoviesPreview, setTrendingMoviesPreview] = React.useState([]);
+    const [topRated, setTopRated] = React.useState([]);
+    const [playing, setPlaying] = React.useState([]);
+
+    return (
+        <MoviesContext.Provider value={{
+            trendingMoviesPreview, setTrendingMoviesPreview,
+            topRated, setTopRated, playing, setPlaying
+            } 
+        }>
+
+        </MoviesContext.Provider>
+    )
+  
+
+}
+
+export function useMoviesContext() {
+    const context = React.useContext(MoviesContext);
+    return context
+}
