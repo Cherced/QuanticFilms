@@ -1,0 +1,56 @@
+.accountContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .userOptions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include ButtonColors;
+        margin-top: 60px;
+
+        :nth-child(2) {
+            margin-top: 30px;
+        }
+
+        .container-bar {
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
+            color: #FFFFFF;
+            margin-top: 60px;
+
+            p {
+                margin-bottom: 5px;
+            }
+
+        }
+
+        animation: shadownText 3s ease-in-out infinite;
+    }
+
+}
+
+@media screen and (min-width: 320px) {
+    .accountContainer {
+        .accountContent {
+            .userAvatar {
+                h1 {
+                    text-align: center;
+                    font-size: 22px;
+                    padding: 10px;
+                    color: #FFFFFF;
+                    font-family: 'Ubuntu';
+                    animation: shadownText 3s ease-in-out infinite;
+                }
+            }
+        } 
+    }
+}

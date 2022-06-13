@@ -1,0 +1,24 @@
+.ModalContainer {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    .GetLuckyConteiner{
+        width: 80%;
+        height: 400px;
+        background:#1A1A1A;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 60px;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 8.5);
+        filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25))
+        h1{
+            font-family: $FontTitle;
+            font-size: 28px;
+            color: white;
+        }
+    }
+}

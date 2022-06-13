@@ -1,0 +1,71 @@
+.BgASide {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: 3;
+
+    .ConteinerButton {
+        width: 80%;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 40px 0;
+
+        .menuAsideButton {
+            background: transparent;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+        }
+    }
+
+    .AsideMenuComp {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+
+        .profileContainer {
+            color: white;
+            display: flex;
+            align-items: center;
+
+            .textProfileContainer {
+                font-family: $FontTitle;
+            }
+
+            img {
+                width: 90px;
+                height: 90px;
+                border-radius: 60px;
+            }
+        }
+
+        .optionsAsideMenu {
+            color: white;
+
+            .listMenu {
+                list-style: none;
+                padding: 10px 20px;
+                display: flex;
+                flex-direction: column;
+                align-self: flex-start;
+
+                li {
+                    a {
+                        p {
+                            font-size: $FontTitle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
